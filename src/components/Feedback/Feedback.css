@@ -1,0 +1,15 @@
+.Feedback_button {
+    display: flex;
+    padding-left: 5px;
+}
+.Feedback_button > li{
+margin-right: 6px;
+list-style: none;
+}
+.Feedback_statistics{
+    padding-left: 5px;
+}
+.Feedback_statistics > li{
+    list-style: none;
+    
+}
