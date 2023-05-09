@@ -3,9 +3,19 @@ import "./Feedback.css"
 
 class Feedback extends Component {
     state = {
-        good: 0,
-        neutral: 0,
-        bad: 0
+        good: 3,
+        neutral: 2,
+        bad: 2
+      }
+
+      countTotalFeedback = () => {
+        const totalFeedback = this.state.good + this.state.neutral + this.state.bad
+        return totalFeedback
+      }
+
+      countPositiveFeedbackPercentage = () => {
+        const result = 100/this.countTotalFeedback()*this.state.good 
+        return Math.round(result)
       }
 
       render() {
@@ -13,15 +23,15 @@ class Feedback extends Component {
         return (
             <div>
                  <h1>Please leave feedback</h1>
-                 <ul className="Feedback_button">
+                 <ul className="Feedback_button_list">
                     <li>
-                        <button type="button">Good</button>
+                        <button type="button" className="Feedback_button">Good</button>
                     </li>
                     <li>
-                        <button type="button">Neutral</button>
+                        <button type="button" className="Feedback_button">Neutral</button>
                     </li>
                     <li>
-                        <button type="button">Bad</button>
+                        <button type="button" className="Feedback_button">Bad</button>
                     </li>
                  </ul>
                  <h2>Statistics</h2>
@@ -29,6 +39,8 @@ class Feedback extends Component {
                     <li>Good: {good}</li>
                     <li>Neutral: {neutral}</li>
                     <li>Bad: {bad}</li>
+                    <li>Total: {this.countTotalFeedback()}</li>
+                    <li>Positive feedback: {this.countPositiveFeedbackPercentage()}%</li>
                  </ul>
             </div>
            
