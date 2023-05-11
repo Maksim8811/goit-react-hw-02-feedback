@@ -16,9 +16,3 @@ list-style: none;
     background-color: rgb(99, 99, 249);
     cursor: pointer;
 }
-.Feedback_statistics{
-    padding-left: 5px;
-}
-.Feedback_statistics > li{
-    list-style: none;
-}
