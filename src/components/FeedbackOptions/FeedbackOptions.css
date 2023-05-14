@@ -1,18 +1,13 @@
 .Feedback_button_list {
-    display: flex;
-    padding-left: 5px;
-}
-.Feedback_button_list > li{
-margin-right: 6px;
-list-style: none;
-}
-
-.Feedback_button {
+    margin-left: 5px;
     border-radius: 5px;
     border: none;
 }
 
-.Feedback_button:hover {
+.Feedback_button_list:hover {
     background-color: rgb(99, 99, 249);
     cursor: pointer;
 }
+
+
+

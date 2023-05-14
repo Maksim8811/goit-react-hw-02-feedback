@@ -1,22 +1,16 @@
-import React, {Component} from "react" 
+import React from "react" 
 import "./Statistics.css"
 
-class Statistics extends Component {
-
-    render () {
-        return(
-        <>
-            <h2>Statistics</h2>
-                 <ul className="Feedback_statistics">
-                    <li>Good: {this.props.good}</li>
-                    <li>Neutral: {this.props.neutral}</li>
-                    <li>Bad: {this.props.bad}</li>
-                    <li>Total: {this.props.total}</li>
-                    <li>Positive feedback: {this.props.positivePercentage}%</li>
-                 </ul>
-        </>
-        )
-    }
+function Statistics ({good,neutral,bad,total,positivePercentage}) {
+    return (
+        <ul className="Feedback_statistics">
+                         <li>Good: {good}</li>
+                         <li>Neutral: {neutral}</li>
+                         <li>Bad: {bad}</li>
+                         <li>Total: {total}</li>
+                         <li>Positive feedback: {positivePercentage}%</li>
+                     </ul>
+    )
 }
 
 export default Statistics
